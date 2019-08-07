@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="comun.master.cs" Inherits="MubIt.Presentacion.comun" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MubIt</title>
+    <link href="../Styles/styles.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Catamaran|Lato|Muli" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="inicio.aspx">
+                    <img src="../img/rsz_1blanco.png" />
+                </a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="btn btn-outline btn-xl page-scroll"href="inicio.aspx">Inicio</a></li>
+                <li class="dropdown">
+                    <a class="btn btn-outline btn-xl page-scroll" data-toggle="dropdown" href="#">Iniciar Sesión
+        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sesionClientes.aspx">Cliente</a></li>
+                        <li><a href="sesionEntrenadores.aspx">Entrenador</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="btn btn-outline btn-xl page-scroll" data-toggle="dropdown" href="#">Registro
+        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="registroCliente.aspx">Cliente</a></li>
+                        <li><a href="registroEntrenador.aspx">Entrenador</a></li>
+                    </ul>
+                </li>
+                <li><a class="btn btn-outline btn-xl page-scroll" href="citas.aspx">Citas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </header>
+    <script src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+
+
+     <footer>
+        <div class="container">
+            <p>&copy; 2017 Mubit App. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Privacidad</a>
+                </li>
+                <li>
+                    <a href="#">Términos</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    </body>
+</html>

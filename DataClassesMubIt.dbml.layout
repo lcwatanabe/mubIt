@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesMubIt">
+  <DataContextMoniker Name="/DataClassesMubItDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cf8d4e42-95ee-4634-895d-b04ad5dde956" absoluteBounds="6.25, 1.25, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/DataClassesMubItDataContext/Citas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a73608d3-b313-489c-9e8b-23c857057263" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c184c53-1a5a-4ba0-8423-996b0b0623c1" absoluteBounds="3.5, 5.125, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DataClassesMubItDataContext/Clientes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="edc6c6c0-dbae-4b2e-a96d-ec16fe780150" absoluteBounds="3.515, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 6.10659912109375); (7.25 : 6.10659912109375); (7.25 : 3.02089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesMubItDataContext/Clientes/Clientes_Citas" />
+      <nodes>
+        <classShapeMoniker Id="3c184c53-1a5a-4ba0-8423-996b0b0623c1" />
+        <classShapeMoniker Id="cf8d4e42-95ee-4634-895d-b04ad5dde956" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="3c08d45b-2151-4955-b8fd-f739a1be4009" absoluteBounds="3.5, 1.25, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataClassesMubItDataContext/Entrenadores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c3d926b-1d1c-411b-8838-92f1a9a1de46" absoluteBounds="3.5149999999999997, 1.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.13544840494792); (6.25 : 2.13544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesMubItDataContext/Entrenadores/Entrenadores_Citas" />
+      <nodes>
+        <classShapeMoniker Id="3c08d45b-2151-4955-b8fd-f739a1be4009" />
+        <classShapeMoniker Id="cf8d4e42-95ee-4634-895d-b04ad5dde956" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8bd1b9f2-5d4e-4e08-947a-ac3b306c063f" absoluteBounds="0.875, 3.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClassesMubItDataContext/Disciplina" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b9902aa-c5a4-4706-851a-6060f6d6c3be" absoluteBounds="0.89000000000000012, 3.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.875 : 3.375); (1.875 : 2.3124995); (3.5 : 2.3124995)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesMubItDataContext/Disciplina/Disciplina_Entrenadores" />
+      <nodes>
+        <classShapeMoniker Id="8bd1b9f2-5d4e-4e08-947a-ac3b306c063f" />
+        <classShapeMoniker Id="3c08d45b-2151-4955-b8fd-f739a1be4009" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

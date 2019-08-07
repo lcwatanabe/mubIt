@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MubIt" Class="DataClassesMubItDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LV322-00\SQLEXPRESS;Initial Catalog=MubIt;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="MubItConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Citas" Member="Citas">
+    <Type Name="Citas">
+      <Column Name="IdCita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Costo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEntrenador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Clientes_Citas" Member="Clientes" ThisKey="IdCliente" OtherKey="idCliente" Type="Clientes" IsForeignKey="true" />
+      <Association Name="Entrenadores_Citas" Member="Entrenadores" ThisKey="idEntrenador" OtherKey="idEntrenador" Type="Entrenadores" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Clientes" Member="Clientes">
+    <Type Name="Clientes">
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Contrasena" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Association Name="Clientes_Citas" Member="Citas" ThisKey="idCliente" OtherKey="IdCliente" Type="Citas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Entrenadores" Member="Entrenadores">
+    <Type Name="Entrenadores">
+      <Column Name="idEntrenador" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Horario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="idDisciplina" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contrasena" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="Entrenadores_Citas" Member="Citas" ThisKey="idEntrenador" OtherKey="idEntrenador" Type="Citas" />
+      <Association Name="Disciplina_Entrenadores" Member="Disciplina" ThisKey="idDisciplina" OtherKey="idDisciplina" Type="Disciplina" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Disciplina" Member="Disciplina">
+    <Type Name="Disciplina">
+      <Column Name="idDisciplina" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="Disciplina_Entrenadores" Member="Entrenadores" ThisKey="idDisciplina" OtherKey="idDisciplina" Type="Entrenadores" />
+    </Type>
+  </Table>
+  <Function Name="dbo.sp_citas" Method="sp_citas">
+    <Parameter Name="accion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IdCita" Parameter="idCita" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Duracion" Parameter="duracion" Type="System.String" DbType="VarChar(45)" />
+    <Parameter Name="Costo" Parameter="costo" Type="System.Double" DbType="Float" />
+    <Parameter Name="IdCliente" Parameter="idCliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idEntrenador" Type="System.Int32" DbType="Int" />
+    <ElementType Name="sp_citasResult">
+      <Column Name="IdCita" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Duracion" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Costo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idEntrenador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_usuarios" Method="sp_usuarios">
+    <Parameter Name="accion" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(25)" />
+    <Parameter Name="Correo" Parameter="correo" Type="System.String" DbType="VarChar(45)" />
+    <Parameter Name="Horario" Parameter="horario" Type="System.String" DbType="VarChar(45)" />
+    <Parameter Name="Disciplina" Parameter="disciplina" Type="System.String" DbType="VarChar(45)" />
+    <Parameter Name="Contrasena" Parameter="contrasena" Type="System.String" DbType="VarChar(45)" />
+    <Parameter Name="Sexo" Parameter="sexo" Type="System.String" DbType="VarChar(25)" />
+    <ElementType Name="sp_usuariosResult">
+      <Column Name="idCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Telefono" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Sexo" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Contrasena" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

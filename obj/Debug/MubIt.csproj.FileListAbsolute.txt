@@ -1,0 +1,27 @@
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\bin\MubIt.dll.config
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\bin\MubIt.dll
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\bin\MubIt.pdb
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\obj\Debug\MubIt.csprojResolveAssemblyReference.cache
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\obj\Debug\MubIt.csproj.CoreCompileInputs.cache
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\obj\Debug\MubIt.dll
+C:\Users\LV322\Documents\Visual Studio 2017\Projects\MubIt\MubIt\obj\Debug\MubIt.pdb
+C:\Users\LV322\Desktop\MubIt\MubIt\bin\MubIt.dll.config
+C:\Users\LV322\Desktop\MubIt\MubIt\bin\MubIt.dll
+C:\Users\LV322\Desktop\MubIt\MubIt\bin\MubIt.pdb
+C:\Users\LV322\Desktop\MubIt\MubIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LV322\Desktop\MubIt\MubIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LV322\Desktop\MubIt\MubIt\obj\Debug\MubIt.csprojResolveAssemblyReference.cache
+C:\Users\LV322\Desktop\MubIt\MubIt\obj\Debug\MubIt.csproj.CoreCompileInputs.cache
+C:\Users\LV322\Desktop\MubIt\MubIt\obj\Debug\MubIt.dll
+C:\Users\LV322\Desktop\MubIt\MubIt\obj\Debug\MubIt.pdb
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\obj\Debug\MubIt.csprojResolveAssemblyReference.cache
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\obj\Debug\MubIt.csproj.CoreCompileInputs.cache
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\obj\Debug\MubIt.dll
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\obj\Debug\MubIt.pdb
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\bin\MubIt.dll.config
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\bin\MubIt.dll
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\bin\MubIt.pdb
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LV322\Documents\Visual Studio 2017\MubIt\MubIt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
